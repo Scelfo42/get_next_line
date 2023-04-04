@@ -33,7 +33,7 @@ YELLOW          = \033[1;33m
 BLUE            = \033[1;34m
 FUCHSIA         = \033[1;35m
 CYAN            = \033[1;36m
-WHITE           = \033[1;37m
+NC		= \033[0m
 
 OBJ = $(SRCS:.c=.o)
 
@@ -57,11 +57,20 @@ re: fclean all
 
 push:
 	git add .
-	@echo "$(RED)Adding all changes"
-	git commit -m "$(shell date +'%H:%M %d-%h') update"
+	@echo "$(RED)Adding all changes..."
+	sleep 1.5
+	@clear
+	@echo "$(GREEN)All changes added$(NC)"
+	@read -p "Enter a custom commit message (leave blank to use the default message): " message; \
+	if [ -n "$$message" ]; then \
+		git commit -m "$$message"; \
+	else \
+		git commit -m "$(shell date +'%H:%M %d-%h') update"; \
+	fi
 	@echo "$(YELLOW)Committing...and..."
 	git push
-	@echo "$(GREEN)PUSHA KEKKO!$(WHITE)"
+	@echo "$(GREEN)PUSHA KEKKO!$(NC)"
+
 norm:
 	norminette *
 
