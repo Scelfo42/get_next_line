@@ -4,4 +4,4 @@ May it be a file, stdin, or even later a network connection, I will always need 
 
 This project was finished on December 19th with Bonus.
 
-[![cscelfo's 42 Get_next_line Score](https://badge42.vercel.app/api/v2/clg22s3a2000608ml2qvs6aly/project/2817953)](https://github.com/JaeSeoKim/badge42)
+[![cscelfo's 42 get_next_line Score](https://badge42.vercel.app/api/v2/clg22s3a2000608ml2qvs6aly/project/2878670)](https://github.com/JaeSeoKim/badge42)
